@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="page_styles.css" />
+</head>
+
+<body>
+    <div>
+        <header class="header">
+            <a href="/index.html" class="back">Volver</a>
+            <h1 class="nombre">
+                < Edu.net Tutoriales />
+            </h1>
+        </header>
+    </div>
+
+    <div class="contenedor">
+        <div class="contenido">
+            <h1 id="selectedCardTitle" class="selected"></h1>
+            <embed id="pdfEmbed" type="application/pdf" width="100%" height="700px" />
+        </div>
+    </div>
+
+    <script>
+        // Recupera el valor almacenado en localStorage
+        var selectedCard = localStorage.getItem("selectedCard");
+
+        // Actualiza el contenido del h1 con el valor recuperado
+        var selectedCardTitle = document.getElementById("selectedCardTitle");
+        if (selectedCard) {
+            selectedCardTitle.textContent = selectedCard;
+        }
+
+        // Actualiza el contenido del embed según la tarjeta seleccionada
+        var pdfEmbed = document.getElementById("pdfEmbed");
+        if (selectedCard === "DNS") {
+            pdfEmbed.src = "/files/dns.pdf";
+        } else if (selectedCard === "UBUNTU") {
+            pdfEmbed.src = "/files/ubuntu.pdf";
+        }
+        // Agrega condiciones similares para otras tarjetas si es necesario
+    </script>
+</body>
+
+</html>
