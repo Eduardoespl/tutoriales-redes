@@ -38,9 +38,17 @@
         // Actualiza el contenido del embed según la tarjeta seleccionada
         var pdfEmbed = document.getElementById("pdfEmbed");
         if (selectedCard === "DNS") {
-            pdfEmbed.src = "/files/dns.pdf";
+            pdfEmbed.src = "/files/Dns.pdf";
         } else if (selectedCard === "UBUNTU") {
-            pdfEmbed.src = "/files/ubuntu.pdf";
+            pdfEmbed.src = "/files/Ubuntu.pdf";
+        } else if (selectedCard === "DHCP"){
+            pdfEmbed.src = "/files/Dhcp.pdf";
+        } else if (selectedCard=== "FTP"){
+            pdfEmbed.src = "/files/Ftp.pdf";
+        } else if (selectedCard=== "WEB (HTTP)"){
+            pdfEmbed.src = "/files/Http.pdf";
+        } else if (selectedCard=== "CORREO (SMTP E IMAP)"){
+            pdfEmbed.src = "/files/Correo.pdf";
         }
         // Agrega condiciones similares para otras tarjetas si es necesario
     </script>
